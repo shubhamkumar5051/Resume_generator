@@ -16,24 +16,29 @@
 
 <body>
     <div class="container">
-        <h2 class="text-center">Resume Generator</h2>
-        <p class="text-center">By : shubham</p>
+        <div class="text-center bg-dark text-light py-.5">
+            <h2>Resume Generator</h2>
+            <p>By : Shubham</p>
+        </div>
 
         <div class="row">
 
             <div class="col-md-6">
-                <h3>personal</h3>
+                <h3 class="my-2 bg-dark text-light text-lg-center py-1 mb-3">Personal Info</h3>
                 <div class="form-group mb-2">
                     <label for="userName">
                         Enter Your Name
                     </label>
                     <input type="text" id="userName" class="form-control" placeholder="Enter here">
                 </div>
-                <div class="form-group my-3">
-                    <label for="userContact">
-                        Your Contact number
-                    </label>
-                    <input type="number" id="userContact" placeholder="Enter here">
+                <div class="form-group my-1">
+                    <label for="email">Email :</label>
+                    <input type="email" placeholder="xyz123@gmail.com" id="email" pattern=".+@globex\.com" size="30"
+                        required>
+                </div>
+                <div class="form-group my-2">
+                    <label for="userContact">Enter your phone number:</label>
+                    <input type="tel" id="userContact" name="phone" placeholder="Enter here">
                 </div>
                 <div class="form-group mb-2">
                     <label for="userAddress">
@@ -46,28 +51,29 @@
                     Important Links
                 </p>
                 <div class="form-group mb-2">
-                    <label for="userFb">
-                        Facebook
+                    <label for="userCodechef">
+                        <img src="photos/cc.png" alt="cc" style="height:20px;margin-bottom:3px"> Codechef
                     </label>
-                    <input type="text" id="userFb" class="form-control" placeholder="Enter link">
+                    <input type="text" id="userCodechef" class=" form-control"
+                        placeholder="https://www.codechef.com/users/xyz_12345">
                 </div>
                 <div class="form-group mb-2">
-                    <label for="userInsta">
-                        Instagram
+                    <label for="userGit">
+                        <img src="photos/git.png" alt="fb" style="height:20px;margin-bottom:3px"> Github
                     </label>
-                    <input type="text" id="userInsta" class="form-control" placeholder="Enter link">
+                    <input type="text" id="userGit" class="form-control" placeholder="Enter link">
                 </div>
                 <div class="form-group mb-2">
-                    <label for="userlinkedin">
-                        Linkedin
+                    <label for="userln">
+                        <img src="photos/linkedin.png" alt="cc" style="height:20px;margin-bottom:3px"> Linkedin
                     </label>
-                    <input type="text" id="userlinkedin" class="form-control" placeholder="Enter link">
+                    <input type="text" id="userln" class="form-control" placeholder="Enter link">
                 </div>
                 <!-- professional -->
 
             </div>
             <div class="col-md-6">
-                <h3>professional</h3>
+                <h3 class="text-center bg-dark text-light my-2 py-1 mb-3">Professional Info</h3>
                 <!-- objective  -->
                 <div class="form-group mb-2">
                     <label for="userObjective">
@@ -76,24 +82,28 @@
                     <textarea id="userObjective" class="form-control" placeholder="Enter here"></textarea>
                 </div>
                 <!-- work Experience -->
-                <div class="form-group mb-2">
+                <div class="form-group mb-2" id="we">
                     <label for="">
                         Work Experience
                     </label>
                     <textarea rows="5" class="form-control userWorkExp" placeholder="Enter here"></textarea>
-                    <div class="mt-1">
-                        <button type="button" id="btnAddWe" class="btn btn-primary btn-sm "><strong>Add</strong><i
+                    <!-- button  -->
+                    <div class="mt-1" id="btnAddWe">
+                        <button onclick="addNewWork()" type="button"
+                            class="btn btn-primary btn-sm "><strong>Add</strong><i
                                 class="fas fa-plus ms-2"></i></button>
                     </div>
                 </div>
                 <!-- academic Qualification  -->
-                <div class="form-group mb-2">
+                <div class="form-group mb-2" id="AqRef">
                     <label for="">
                         Academic Qualification
                     </label>
                     <textarea rows="5" class="form-control userAq" placeholder="Enter here"></textarea>
-                    <div class="mt-1">
-                        <button type="button" id="btnAddAq" class="btn btn-primary btn-sm "><strong>Add</strong><i
+                    <!-- button  -->
+                    <div class="mt-1" id="btnAddAq">
+                        <button onclick="addNewAcademic()" type="button"
+                            class="btn btn-primary btn-sm "><strong>Add</strong><i
                                 class="fas fa-plus ms-2"></i></button>
                     </div>
                 </div>
